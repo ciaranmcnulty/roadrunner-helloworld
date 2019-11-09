@@ -49,7 +49,7 @@ while ($req = $psr7->acceptRequest()) {
         $response = $kernel->handle($request);
         $psr7->respond($psrHttpFactory->createResponse($response));
         $kernel->terminate($request, $response);
-        $kernel->reboot(null);
+        //$kernel->reboot(null);
     } catch (\Throwable $e) {
         $psr7->getWorker()->error((string)$e);
     }
