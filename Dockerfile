@@ -1,6 +1,6 @@
 FROM php:7.3-alpine as base
 WORKDIR /usr/src
-ENTRYPOINT ["./rr","serve"]
+ENTRYPOINT ["./rr","serve","-d"]
 EXPOSE 80
 
 FROM base as composer-dev
