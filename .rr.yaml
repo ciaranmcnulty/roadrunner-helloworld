@@ -1,5 +1,4 @@
 http:
-  address: 0.0.0.0:80
   workers:
     command: "php public/worker.php"
     pool:

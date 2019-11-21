@@ -1,7 +1,6 @@
 FROM php:7.3-alpine as base
 WORKDIR /usr/src
-ENTRYPOINT ["./rr","serve","-d"]
-EXPOSE 80
+ENTRYPOINT ./entrypoint.sh
 
 FROM base as composer-dev
 COPY --from=composer:1.7 /usr/bin/composer /usr/bin/
