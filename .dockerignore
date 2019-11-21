@@ -4,4 +4,5 @@ var
 Dockerfile
 .env
 Readme.md
+composer.lock
 

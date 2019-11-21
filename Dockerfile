@@ -5,7 +5,7 @@ EXPOSE 80
 
 FROM base as composer-dev
 COPY --from=composer:1.7 /usr/bin/composer /usr/bin/
-COPY composer.json composer.lock /usr/src/
+COPY composer.json /usr/src/
 RUN composer install
 
 FROM composer-dev as composer-prod
